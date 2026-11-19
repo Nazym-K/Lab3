@@ -71,7 +71,6 @@ public:
 		S3D_DrawLineX(renderer, 120, 10, 500, GREEN);
 		S3D_DrawLineY(renderer, 220, 60, 600, RED);
 		//S3D_DrawLine;
-		//768
 		S3D_Rectangle rectangle = S3D_Rectangle(Vector2i(renderer->width/2 - 40, renderer->height / 2 - 40), Vector2i(renderer->width / 2 + 40, renderer->height / 2 + 40));
 		S3D_DrawRectangle(renderer, rectangle ,GOLD);
 		S3D_DrawRectangleLines(renderer, rectangle , RED);
@@ -81,6 +80,8 @@ public:
 		int radius = 20;
 		Vector2i circle = Vector2i(S3D_ClampWithCircle(renderer, S3D_GetMousePosition(renderer), radius));
 		S3D_DrawCircle(renderer,circle.x,circle.y,radius, MAGENTA);
+		S3D_DrawCircleLines(renderer, circle.x, circle.y, radius, GREEN);
+
 
 		S3D_DrawLine(renderer, renderer->width / 2, renderer->height / 2, circle.x, circle.y, RED, BLANK);
 
